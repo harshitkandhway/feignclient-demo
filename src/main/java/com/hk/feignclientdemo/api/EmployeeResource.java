@@ -21,7 +21,7 @@ public class EmployeeResource {
     @Autowired
     private EmployeeClient employeeClient;
 
-    @GetMapping
+    @GetMapping("/employees")
     public ResponseEntity<List<Employee>> saveAll() {
         Employee[] retrievedEmployees = employeeClient.getUsers().getData();
         if (Objects.nonNull(retrievedEmployees))
